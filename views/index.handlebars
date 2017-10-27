@@ -1,0 +1,27 @@
+<h1>EAT BURGER</h1>
+
+<ol>
+	{{!-- Each index in object burgers --}}
+	{{#each burgers}}
+		{{#if devoured}}
+		{{!-- Workaround for devoured false --}}
+		{{else}}
+			<li>
+				<p>Name: {{burger_name}}</p>
+				<button class='devour' data-id='{{this.id}}'>Devour it!</button>
+			</li>
+		{{/if}}
+	{{/each}}
+</ol>
+
+
+<ol>
+	{{#each burgers}}
+		{{#if devoured}}
+			<li>
+				<p>Name: {{burger_name}}</p>
+			</li>
+		{{/if}}
+	{{/each}}
+</ol>
+
