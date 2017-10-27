@@ -1,27 +1,28 @@
 <h1>EAT BURGER</h1>
 
-<ol>
+<ul class='not-eaten' style="list-style-type:none">
 	{{!-- Each index in object burgers --}}
 	{{#each burgers}}
 		{{#if devoured}}
 		{{!-- Workaround for devoured false --}}
 		{{else}}
 			<li>
-				<p>Name: {{burger_name}}</p>
-				<button class='devour' data-id='{{this.id}}'>Devour it!</button>
+				<p class='not-eaten-list'> {{burger_name}} 
+				<button class='devour' data-id='{{this.id}}'>EAT MEEEEE!</button></p>
+
 			</li>
 		{{/if}}
 	{{/each}}
-</ol>
+</ul>
 
 
-<ol>
+<ul class='eaten' style="list-style-type:none">
 	{{#each burgers}}
 		{{#if devoured}}
 			<li>
-				<p>Name: {{burger_name}}</p>
+				<p class='eaten-list'>You ate the {{burger_name}}</p>
 			</li>
 		{{/if}}
 	{{/each}}
-</ol>
+</ul>
 

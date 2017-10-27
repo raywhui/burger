@@ -4,40 +4,106 @@
 	<meta charset="UTF-8">
 		<title>Burger</title>
 		<script src="https://code.jquery.com/jquery.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Meie+Script" rel="stylesheet">
+
+	<style type="text/css">
+		html{
+			background-image: url(https://www.impossiblefoods.com/images/headshots/AniketK.png);
+			background-color: orange;
+		}
+
+		body{
+			font-family: 'Meie Script', cursive;
+			position: absolute;
+  		left: 50%;
+			width:1200px;
+			height: auto;
+			transform: translate(-50%);
+		}
+
+		h1{
+			font-weight: bold;
+			font-size: 80pt;
+			color:white;
+			text-align:center;
+			text-shadow: 5px 5px 5px black;
+		}
+
+		.not-eaten{
+			float:left;
+		}
+
+		.not-eaten-list{
+			font-size: 25px;
+			width:400px;
+			padding:10px;
+			background-color: white;
+			border: 3px black solid;
+			margin:20px;
+			font-weight: bold;
+		}
+
+		.devour{
+			float:right;
+			border-radius: 10px;
+			padding:5px;
+			font-color:white;
+			font-size: 10pt;
+		}
+
+		.eaten{
+			float:right;
+		}
+
+		.eaten-list{
+			font-size: 25px;
+			width:400px;
+			padding:10px;
+			background-color: grey;
+			border: 3px black solid;
+			margin:20px;
+		}
+
+		textarea, .submit{
+			position: absolute;
+			bottom:-20%;
+			left:50%;
+			transform: translate(-50%);
+		}
+
+		.submit{
+			bottom:-30%;
+			background-color: yellow;
+			font-weight: bold;
+			font-size:20pt;
+		}
+
+		.cat{
+			float:left;
+			position:fixed;
+			top:100px;
+			right:0;
+			z-index: -1;
+		}
+		.other-cat{
+			width:450px;
+			float:left;
+			position:fixed;
+			top:100px;
+			left:0;
+			z-index: -1;
+		}
+
+	</style>
+
 	</head>
+
 	<body>
 		{{{ body }}}
-
-		<textarea rows="4" cols="50"></textarea>
+		<textarea rows="4" cols="50" placeholder="PUT YOUR BURGER NAME IN THIS BOX!"></textarea>
 		<button class='submit'>Submit</button>
 	</body>
-<script type="text/javascript">
-
-$('.submit').on('click', function(){
-	var burgerName = {
-		burger_name: $('textarea').val().trim()
-	};
-	console.log(burgerName);
-	console.log(burgerName.burger_name);
-
-	$.post('api/burgers', burgerName).then(function(){
-		location.reload();
-	});
-});
-
-$('ol').on('click', '.devour', function(){
-	// $(this).data() already an object, sends as is
-	console.log($(this).data());
-
-	$.ajax('api/burgers',{
-		type:'PUT',
-		data: $(this).data()
-	}).then(function(){
-		location.reload();
-	});
-});
-
-
-
-</script>
+			<img class='cat' src='https://24.media.tumblr.com/cea83a1966b5d63a5f1ccbba0be4e430/tumblr_mrqomxav7v1sfk0ybo1_500.gif'>	
+			<img class='other-cat' src='https://media.giphy.com/media/PztwkkDBylzZm/giphy.gif'>
+	<script type="text/javascript" src='./assets/js/burgers.js'></script>
 </html>
