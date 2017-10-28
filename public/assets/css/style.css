@@ -1,0 +1,86 @@
+		html{
+			background-image: url(https://www.impossiblefoods.com/images/headshots/AniketK.png);
+			background-color: orange;
+		}
+
+		body{
+			font-family: 'Meie Script', cursive;
+			position: absolute;
+  		left: 50%;
+			width:1200px;
+			height: auto;
+			transform: translate(-50%);
+		}
+
+		h1{
+			font-weight: bold;
+			font-size: 80pt;
+			color:white;
+			text-align:center;
+			text-shadow: 5px 5px 5px black;
+		}
+
+		.not-eaten{
+			float:left;
+		}
+
+		.not-eaten-list{
+			font-size: 25px;
+			width:400px;
+			padding:10px;
+			background-color: white;
+			border: 3px black solid;
+			margin:20px;
+			font-weight: bold;
+		}
+
+		.devour{
+			float:right;
+			border-radius: 10px;
+			padding:5px;
+			font-color:white;
+			font-size: 10pt;
+		}
+
+		.eaten{
+			float:right;
+		}
+
+		.eaten-list{
+			font-size: 25px;
+			width:400px;
+			padding:10px;
+			background-color: grey;
+			border: 3px black solid;
+			margin:20px;
+		}
+
+		textarea, .submit{
+			position: absolute;
+			bottom:-20%;
+			left:50%;
+			transform: translate(-50%);
+		}
+
+		.submit{
+			bottom:-30%;
+			background-color: yellow;
+			font-weight: bold;
+			font-size:20pt;
+		}
+
+		.cat{
+			float:left;
+			position:fixed;
+			top:100px;
+			right:0;
+			z-index: -1;
+		}
+		.other-cat{
+			width:450px;
+			float:left;
+			position:fixed;
+			top:100px;
+			left:0;
+			z-index: -1;
+		}
